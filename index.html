@@ -789,41 +789,51 @@
         </div>
         <div class="col-md-5 col-10 mt-3 mt-md-0" data-aos="slide-left">
           <div class="contact-form">
-            <div class="mb-3">
-              <input
-                type="text"
-                class="form-control"
-                id="exampleFormControlInput1"
-                placeholder="Name"
-              />
-            </div>
-            <div class="mb-3">
-              <input
-                type="email"
-                class="form-control"
-                id="exampleFormControlInput1"
-                placeholder="E-mail"
-              />
-            </div>
-            <div class="mb-3">
-              <input
-                type="text"
-                class="form-control"
-                id="exampleFormControlInput1"
-                placeholder="Mobile No."
-              />
-            </div>
-            <div class="mb-3">
-              <textarea
-                class="form-control"
-                id="exampleFormControlTextarea1"
-                placeholder="Message"
-                rows="5"
-              ></textarea>
-            </div>
-            <button class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
-              Submit
-            </button>
+            
+<!-- contact Form New Code -->
+
+            
+            <form id="contactForm">
+        <div class="mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="Name"
+          />
+        </div>
+        <div class="mb-3">
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="E-mail"
+            required
+          />
+          <small id="emailError" class="text-danger d-none">Email is required.</small>
+        </div>
+        <div class="mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="mobile"
+            placeholder="Mobile No."
+          />
+        </div>
+        <div class="mb-3">
+          <textarea
+            class="form-control"
+            id="message"
+            placeholder="Message"
+            rows="5"
+            required
+          ></textarea>
+          <small id="messageError" class="text-danger d-none">Message cannot be empty.</small>
+        </div>
+        <button type="button" id="submitButton" class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
+          Submit
+        </button>
+      </form>        
           </div>
         </div>
       </div>
