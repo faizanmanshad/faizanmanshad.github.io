@@ -342,28 +342,34 @@ footer .link-group a{
 footer .link-group a:hover{
     color: #fca61f;
 }
-.social-links button{
+.social-links button {
     border: none;
     margin-right: 1rem;
     font-size: 1.2rem;
     background-color: #fff;
     padding: 14px 15px 10px 15px;
+    cursor: pointer; /* Added for better UX */
+    transition: transform 1s, background-color 1s, color 1s; /* Transition specified for all relevant properties */
 }
-.social-links .linkedin{
-    color: #f33a7e;
+
+.social-links .linkedin {
+    color: #0A66C2; /* Corrected LinkedIn color */
 }
-.social-links button:hover{
+
+.social-links button:hover {
     color: #fff;
     transform: translateY(-20px);
-    transition-duration: 1s;
 }
-.social-links .linkedin:hover{
-    background-color: #f33a7e;
+
+.social-links .linkedin:hover {
+    background-color: #0A66C2; /* Corrected LinkedIn hover background */
 }
-.social-links .whatsapp{
+
+.social-links .whatsapp {
     color: #25D366;
 }
-.social-links .whatsapp:hover{
+
+.social-links .whatsapp:hover {
     background-color: #25D366;
 }
 
