@@ -137,6 +137,57 @@ function scrollFunction() {
     mybutton.style.display = "none";
   }
 }
+
+
+
+
+document.getElementById("submitButton").addEventListener("click", function () {
+    let email = document.getElementById("email");
+    let message = document.getElementById("message");
+    let emailError = document.getElementById("emailError");
+    let messageError = document.getElementById("messageError");
+
+    let isValid = true;
+
+    // Validate email
+    if (!email.value || !email.value.includes("@")) {
+      email.classList.add("is-invalid");
+      emailError.classList.remove("d-none");
+      isValid = false;
+    } else {
+      email.classList.remove("is-invalid");
+      emailError.classList.add("d-none");
+    }
+
+    // Validate message
+    if (!message.value.trim()) {
+      message.classList.add("is-invalid");
+      messageError.classList.remove("d-none");
+      isValid = false;
+    } else {
+      message.classList.remove("is-invalid");
+      messageError.classList.add("d-none");
+    }
+
+    if (isValid) {
+      // Send form data to the backend
+      fetch("/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: document.getElementById("name").value,
+          email: email.value,
+          mobile: document.getElementById("mobile").value,
+          message: message.value,
+        }),
+      })
+        .then((response) => response.json())
+        .then((data) => alert("Message sent successfully!"))
+        .catch((error) => alert("An error occurred. Please try again."));
+    }
+  });
 // When the user clicks on the button, scroll to the top of the document
 mybutton.addEventListener("click",function(){
   document.body.scrollTop = 0;
