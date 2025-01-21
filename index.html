@@ -794,47 +794,54 @@
 
             
             <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
-              <input type="hidden" name="access_key" value="24c457c3-e651-4c12-8953-987a02e9b1a3">
-        <div class="mb-3">
-          <input
-            type="text"
-            class="form-control"
-            id="name"
-            placeholder="Name"
-          />
-        </div>
-        <div class="mb-3">
-          <input
-            type="email"
-            class="form-control"
-            id="email"
-            placeholder="E-mail"
-            required
-          />
-          <small id="emailError" class="text-danger d-none">Email is required.</small>
-        </div>
-        <div class="mb-3">
-          <input
-            type="text"
-            class="form-control"
-            id="mobile"
-            placeholder="Mobile No."
-          />
-        </div>
-        <div class="mb-3">
-          <textarea
-            class="form-control"
-            id="message"
-            placeholder="Message"
-            rows="5"
-            required
-          ></textarea>
-          <small id="messageError" class="text-danger d-none">Message cannot be empty.</small>
-        </div>
-        <button type="button" id="submitButton" class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
-          Submit
-        </button>
-      </form>        
+  <input type="hidden" name="access_key" value="24c457c3-e651-4c12-8953-987a02e9b1a3" />
+
+  <div class="mb-3">
+    <input
+      type="text"
+      class="form-control"
+      id="name"
+      name="name"
+      placeholder="Name"
+      required
+    />
+  </div>
+  <div class="mb-3">
+    <input
+      type="email"
+      class="form-control"
+      id="email"
+      name="email"
+      placeholder="E-mail"
+      required
+    />
+    <small id="emailError" class="text-danger d-none">Email is required.</small>
+  </div>
+  <div class="mb-3">
+    <input
+      type="text"
+      class="form-control"
+      id="mobile"
+      name="mobile"
+      placeholder="Mobile No."
+    />
+  </div>
+  <div class="mb-3">
+    <textarea
+      class="form-control"
+      id="message"
+      name="message"
+      placeholder="Message"
+      rows="5"
+      required
+    ></textarea>
+    <small id="messageError" class="text-danger d-none">Message cannot be empty.</small>
+  </div>
+  <button type="submit" class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
+    Submit
+  </button>
+</form>
+        
           </div>
         </div>
       </div>
