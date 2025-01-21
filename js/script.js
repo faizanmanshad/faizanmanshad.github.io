@@ -140,42 +140,10 @@ function scrollFunction() {
 
 
 
-const response = await fetch("https://api.web3forms.com/submit", {
-  method: "POST",
-  body: formData,
-  headers: {
-    Accept: "application/json",
-  },
-});
 
 
 
 
-  const form = document.getElementById("contactForm");
-  form.addEventListener("submit", async function (e) {
-    e.preventDefault();
-
-    const formData = new FormData(form);
-
-    try {
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: formData,
-        headers: {
-          Accept: "application/json",
-        },
-      });
-
-      if (response.ok) {
-        alert("Thank you! Your message has been sent.");
-        form.reset();
-      } else {
-        alert("Oops! Something went wrong. Please try again.");
-      }
-    } catch (error) {
-      alert("An error occurred. Please check your internet connection.");
-    }
-  });
 
 
   document.body.scrollTop = 0;
