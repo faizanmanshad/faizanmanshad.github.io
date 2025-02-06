@@ -3,8 +3,7 @@ body{
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 400;
 }
-
-html, body {
+div {
     overflow-x: hidden;
 }
 
